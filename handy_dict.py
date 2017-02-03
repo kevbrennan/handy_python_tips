@@ -12,6 +12,19 @@ my_dict = {
         'aidan': 49
         }
 
+# print out keys and values in a sorted dictionary nicely
+def print_dict(my_dict):
+    
+    for k, v in sorted(my_dict.items()):
+        print('{}: {}'.format(k, v))
+        
+        
+# search for key in dictionary and return value(s)        
+def search_key(the_key, my_dict):
+    # use.get   
+    return my_dict.get(the_key, '{} not found in dictionary'.format(the_key))     
+        
+
 # search for all cases of a value in a dictionary(not the key)
 def search_dict(val, my_dict):
     # dictionary to hold return values
